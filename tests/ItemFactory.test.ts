@@ -9,7 +9,10 @@ describe("Item Factory Module", () => {
 			"id": 1,
 			"name": "test",
 			"value": 0,
-			"damage": 10,
+			"status": {
+				"attack": 10,
+				"speed": 10
+			},
 			"type": "weapon"
 		}
 		const weapon = ItemFactory.create(weaponData);
@@ -21,7 +24,9 @@ describe("Item Factory Module", () => {
 			"id": 1,
 			"name": "test",
 			"value": 0,
-			"mp": 10,
+			"status": {
+				"restore_mp": 10,
+			},
 			"type": "consumable"
 		}
 		const consumable = ItemFactory.create(consumableData);

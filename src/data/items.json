@@ -1,26 +1,127 @@
 [
-	{
-		"id": 1,
-		"name": "Greatsword",
-		"value": 10,
-		"description": "Uma lâmina longa e robusta, forjada em aço resistente. Seu peso confere golpes poderosos, ideais para dilacerar armaduras e causar grande impacto em inimigos descuidados. Embora seja lenta para empunhar, a força bruta necessária para manejá-la compensa no estrondo de cada golpe.",
-		"damage": 5,
-		"type": "weapon"
-	},
-	{
-		"id": 2,
-		"name": "Mana Potion",
-		"value": 1,
-		"description": "Mana potion made for mana regeneration.",
-		"mp": 10,
-		"type": "consumable"
-	},
-	{
-		"id": 3,
-		"name": "Health Potion",
-		"value": 1,
-		"description": "Health potion made for health regeneration.",
-		"hp": 10,
-		"type": "consumable"
-	}
+  {
+    "id": 1,
+    "name": "Greatsword",
+    "value": 10,
+    "description": "A long, sturdy blade forged from resilient steel. Its weight delivers powerful strikes, ideal for overwhelming foes with raw power.",
+    "type": "weapon",
+    "status": {
+      "attack": 5,
+      "speed": -2
+    }
+  },
+  {
+    "id": 2,
+    "name": "Mana Potion",
+    "value": 1,
+    "description": "A crystalline potion that restores a moderate amount of mana upon drinking.",
+    "type": "consumable",
+    "status": {
+      "restore_mp": 10
+    }
+  },
+  {
+    "id": 3,
+    "name": "Health Potion",
+    "value": 1,
+    "description": "A rosy elixir that heals wounds and replenishes vitality when consumed.",
+    "type": "consumable",
+    "status": {
+      "restore_hp": 10
+    }
+  },
+  {
+    "id": 4,
+    "name": "Battle Axe",
+    "value": 8,
+    "description": "A heavy axe that delivers brutal chops at the cost of slower recovery between swings.",
+    "type": "weapon",
+    "status": {
+      "attack": 7,
+      "speed": -3
+    }
+  },
+  {
+    "id": 5,
+    "name": "Shortbow",
+    "value": 6,
+    "description": "A simple bow that allows you to strike from a distance without the need to move.",
+    "type": "weapon",
+    "status": {
+      "attack": 4
+    }
+  },
+  {
+    "id": 6,
+    "name": "Throwing Knife",
+    "value": 2,
+    "description": "A balanced knife that you can hurl in a single text command to hit distant targets.",
+    "type": "weapon",
+    "status": {
+      "attack": 3
+    }
+  },
+  {
+    "id": 7,
+    "name": "Antidote",
+    "value": 2,
+    "description": "A bitter liquid that neutralizes common poisons and toxins when ingested.",
+    "type": "consumable",
+    "status": {
+      "cure_poison": true
+    }
+  },
+  {
+    "id": 8,
+    "name": "Strength Elixir",
+    "value": 5,
+    "description": "A potent brew that increases physical strength and damage output instantly.",
+    "type": "consumable",
+    "status": {
+      "attack_bonus": 3
+    }
+  },
+  {
+    "id": 9,
+    "name": "Crystal Wand",
+    "value": 12,
+    "description": "A slender wand tipped with a glowing crystal. Enhances magical attacks in a single cast.",
+    "type": "weapon",
+    "status": {
+      "magic_attack": 6
+    }
+  },
+  {
+    "id": 10,
+    "name": "Fire Arrow",
+    "value": 3,
+    "description": "An arrow imbued with fire magic. Ignites the target on impact.",
+    "type": "weapon",
+    "status": {
+      "attack": 5,
+      "burn_damage": 2
+    }
+  },
+  {
+    "id": 11,
+    "name": "Ice Shard",
+    "value": 3,
+    "description": "A shard of magically frozen water. Chills and slows enemies upon contact.",
+    "type": "weapon",
+    "status": {
+      "attack": 4,
+      "slow_percentage": 20
+    }
+  },
+  {
+    "id": 12,
+    "name": "Bandage",
+    "value": 1,
+    "description": "A simple cloth wrap that stops bleeding and heals minor cuts instantly.",
+    "type": "consumable",
+    "status": {
+      "restore_hp": 5
+    }
+  }
 ]
+

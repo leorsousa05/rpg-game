@@ -7,13 +7,22 @@ export interface BaseItemData {
 
 export interface WeaponData extends BaseItemData {
 	type: "weapon";
-	damage: number;
+	status: WeaponStatus
+}
+
+export interface WeaponStatus {
+	attack: number,
+	speed: number
 }
 
 export interface ConsumableData extends BaseItemData {
 	type: "consumable";
-	hp?: number;
-	mp?: number;
+	status: ConsumableStatus;
+}
+
+export interface ConsumableStatus {
+	restore_hp?: number;
+	restore_mp?: number;
 }
 
 export type ItemData = WeaponData | ConsumableData;

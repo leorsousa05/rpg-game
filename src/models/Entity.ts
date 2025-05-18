@@ -1,11 +1,13 @@
+import ItemService from "../services/ItemService";
 import { Class } from "../types/Entity";
 import { ItemData } from "../types/Item";
+import { Item } from "./Item";
 
 export default class Entity {
 	private _name: string;
 	private _characterClass: Class;	
 	private _exp: number;
-	private _inventory: ItemData[];
+	private _inventory: Item<ItemData>[];
 	private _hp: number;
 	private _mp: number;
 
@@ -16,6 +18,17 @@ export default class Entity {
 		this._inventory = [];
 		this._hp = 100;
 		this._mp = 20;
+	}
+
+	takeItem(id: number) {
+		const item = new ItemService().getItemById(String(id));
+		if(item) {
+			this._inventory.push(item);
+		}
+	}
+
+	removeItem(id: number) {
+		this._inventory = this._inventory.filter(item => item.id !== id)
 	}
 
 	takeDamage(ammount: number) {
@@ -51,5 +64,11 @@ export default class Entity {
 	public get mp() : number {
 		return this._mp
 	}
+
+	
+	public get inventory() : Item<ItemData>[] {
+		return this._inventory;
+	}
+	
 	
 }

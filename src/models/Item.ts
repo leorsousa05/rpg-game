@@ -5,6 +5,12 @@ export abstract class Item<D extends BaseItemData> {
 	constructor(protected data: D) {}
 
 	abstract use(user: Entity, target?: Entity): void;
+
+	
+	public get id() : number {
+		return this.data.id;
+	}
+	
 }
 
 export class Weapon extends Item<WeaponData> {
@@ -13,7 +19,7 @@ export class Weapon extends Item<WeaponData> {
 	}
 
 	use(target: Entity): void {
-		target.takeDamage(this.data.damage);
+		target.takeDamage(this.data.status.attack);
 	}
 }
 
@@ -23,11 +29,11 @@ export class Consumable extends Item<ConsumableData> {
 	}
 
 	use(user: Entity): void {
-		if(this.data.mp) {
-			user.recoverMana(this.data.mp);
+		if(this.data.status.restore_mp) {
+			user.recoverMana(this.data.status.restore_mp);
 		}
-		if(this.data.hp) {
-			user.recoverHealth(this.data.hp);
+		if(this.data.status.restore_hp) {
+			user.recoverHealth(this.data.status.restore_hp);
 		}
 	}
 }
