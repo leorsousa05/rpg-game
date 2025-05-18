@@ -1,0 +1,26 @@
+[
+	{
+		"id": 1,
+		"name": "Greatsword",
+		"value": 10,
+		"description": "Uma lâmina longa e robusta, forjada em aço resistente. Seu peso confere golpes poderosos, ideais para dilacerar armaduras e causar grande impacto em inimigos descuidados. Embora seja lenta para empunhar, a força bruta necessária para manejá-la compensa no estrondo de cada golpe.",
+		"damage": 5,
+		"type": "weapon"
+	},
+	{
+		"id": 2,
+		"name": "Mana Potion",
+		"value": 1,
+		"description": "Mana potion made for mana regeneration.",
+		"mp": 10,
+		"type": "consumable"
+	},
+	{
+		"id": 3,
+		"name": "Health Potion",
+		"value": 1,
+		"description": "Health potion made for health regeneration.",
+		"hp": 10,
+		"type": "consumable"
+	}
+]
